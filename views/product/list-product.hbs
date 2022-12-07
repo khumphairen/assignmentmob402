@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3">
+            <h1 class="my-4">Ren90s</h1>
+            <div class="list-group">
+                <a href="#" class="list-group-item">Thể loại 1</a>
+                <a href="#" class="list-group-item">Thể loại 2</a>
+                <a href="#" class="list-group-item">Thể loại 3</a>
+            </div>
+        </div>
+        <!-- /.col-lg-3 -->
+
+        <div class="col-lg-9">
+
+            <!-- Slider -->
+            <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="images/1120.jpg" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="images/bn2.jpg" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="images/bn3.jpg" alt="Third slide">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only"></span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only"></span>
+                </a>
+            </div><!-- ./ end slider -->
+
+            <!-- Product List -->
+            <div class="row">
+{{#each listProduct}}
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <a href="#"><img class="card-img-top" src="images/ca-phe-espresso-2.jpg" alt=""></a>
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                <a href="#">{{this.nameProduct}}</a>
+                            </h4>
+                            <h5>${{this.priceProduct}}</h5>
+                            <p class="card-text">{{this.categoryProduct}}</p>
+                            <button  style="border: 0px; border-radius: 5px; background: orange" data-bs-toggle="dropdown">
+                                <a  style="color: black; text-decoration: none">thêm</a>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/product/edit/{{this.id}}" >Sửa</a></li>
+                                <li><a class="dropdown-item" href="/product/delete/{{this.id}}" >Xóa</a></li>
+                                <li><a class="dropdown-item" href="/product/detail/{{this.id}}">Chi tiết</a></li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                        </div>
+                    </div>
+                </div>
+{{/each}}
+
+
+            </div>
+            <!-- /.row Product List -->
+
+        </div>
+        <!-- /.col-lg-9 -->
+
+    </div>
+    <!-- /.row -->
+
+</div>
+<!-- /.container -->
+
+<!-- Footer -->
+
+
+
+</body>
+</html>
+
+<!--<div class="container">-->
+
+<!--    <h2 style="text-align: center">DANH SÁCH SẢN PHẨM</h2>-->
+
+<!--    <table class="table">-->
+<!--        <thead>-->
+<!--        <tr>-->
+<!--            <th scope="col-4">Tên sản phẩm</th>-->
+<!--            <th scope="col-4">Giá Thành</th>-->
+<!--            <th scope="col-2">Thể loại</th>-->
+<!--            <th scope="col-2"></th>-->
+
+<!--        </tr>-->
+<!--        </thead>-->
+<!--        <tbody>-->
+<!--        -->
+<!--            <tr>-->
+<!--                <td></td>-->
+<!--                <td></td>-->
+<!--                <td></td>-->
+<!--                <td>-->
+
+
+
+
+<!--                </td>-->
+<!--            </tr>-->
+<!--        -->
+<!--        </tbody>-->
+<!--    </table>-->
+
+<!--</div>-->
+
+<!--</body>-->
+<!--</html>-->

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>QLBH</title>
+</head>
+<body>
+
+<div class="container">
+
+
+
+    <h2 style="text-align: center">DANH SÁCH THỂ LOẠI</h2>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col-5">Tên thể loại</th>
+            <th scope="col-5">Mã thể loại</th>
+            <th scope="col-2"></th>
+
+        </tr>
+        </thead>
+        <tbody>
+        {{#each listCategory}}
+            <tr>
+                <td>{{this.nameCategory}}</td>
+                <td>{{this.maCategory}}</td>
+                <td>
+                    <button  style="border: 0px; border-radius: 5px; background: orange" data-bs-toggle="dropdown">
+                        <a  style="color: black; text-decoration: none">thêm</a>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="/category/edit/{{this.id}}" >Sửa</a></li>
+                        <li><a class="dropdown-item" href="/category/delete/{{this.id}}" >Xóa</a></li>
+                    </ul>
+
+                </td>
+            </tr>
+        {{/each}}
+        </tbody>
+    </table>
+
+</div>
+
+</body>
+</html>
